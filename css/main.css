@@ -1,0 +1,74 @@
+.nav a {
+    color: #5a5a5a;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 14px 10px;
+    text-transform: uppercase;
+}
+
+.nav li {
+    display: inline;
+}
+
+.jumbotron {
+    background:url('../images/beerbar.jpg') no-repeat center center;
+    height: 500px;
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+.jumbotron .container {
+    position: relative;
+    top: 70px;
+    left: 50px;
+}
+.jumbotron h1 {
+    color: #fff;
+    font-size: 70px;  
+    font-family: 'Shift', sans-serif;
+    font-weight: bold;
+    position: relative;
+}
+/* UNUSED
+.jumbotron p {
+    font-size: 20px;
+    color: #fff;
+} */
+
+.beer-guide {
+    background-color: #efefef;
+    border-bottom: 10px solid #dbdbdb;
+}
+.beer-guide h3 {
+    color: #393C3d;
+    font-size: 24px;
+    text-align: left;
+}
+.beer-guide h2 {
+    color: #393C3d;
+    font-size: 20px;
+    text-align: left;
+}
+.beer-guide p {
+    color: #393C3d;
+    font-size: 15px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+
+
+/* UNUSED
+
+.learn-more {
+    background-color: #f7f7f7;
+}
+.learn-more h3 {
+    font-family: 'Shift', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.learn-more a {
+    color: #00b0ff;
+} */
+
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+      
+  <script>
+    var tap_data;
+    
+    function load_data() {
+        $.getJSON("taps.json", function(json) {
+            <!-- console.log(json); -->
+            tap_data = json
+        });
+        update_volumes();
+    }
+
+    function update_volumes() {
+    
+        if (tap_data[1][0] < 0.0) {
+            document.getElementById("tap1_gals").innerHTML = "Empty";
+            document.getElementById("tap1_showgals").innerHTML = "";
+            document.getElementById("tap1_liters").innerHTML = "";
+            document.getElementById("tap1_showliters").innerHTML = "";
+        } else { 
+            document.getElementById("tap1_gals").innerHTML = tap_data[1][0].toFixed(2);
+            document.getElementById("tap1_showgals").innerHTML = " gal. (";
+            document.getElementById("tap1_liters").innerHTML = (tap_data[1][0]*3.785).toFixed(1);
+            document.getElementById("tap1_showliters").innerHTML = "L) remaining";
+        }
+        
+        if (tap_data[2][0] < 0.0) {
+            document.getElementById("tap2_gals").innerHTML = "Empty";
+            document.getElementById("tap2_showgals").innerHTML = "";
+            document.getElementById("tap2_liters").innerHTML = "";
+            document.getElementById("tap2_showliters").innerHTML = "";
+        } else {
+            document.getElementById("tap2_gals").innerHTML = tap_data[2][0].toFixed(2);
+            document.getElementById("tap2_showgals").innerHTML = " gal. (";
+            document.getElementById("tap2_liters").innerHTML = (tap_data[2][0]*3.785).toFixed(1);
+            document.getElementById("tap2_showliters").innerHTML = "L) remaining";
+        }
+        
+        if (tap_data[3][0] < 0.0) {
+            document.getElementById("tap3_gals").innerHTML = "Empty";
+            document.getElementById("tap3_showgals").innerHTML = "";
+            document.getElementById("tap3_liters").innerHTML = "";
+            document.getElementById("tap3_showliters").innerHTML = "";
+        } else {
+            document.getElementById("tap3_gals").innerHTML = tap_data[3][0].toFixed(2);
+            document.getElementById("tap3_showgals").innerHTML = " gal. (";
+            document.getElementById("tap3_liters").innerHTML = (tap_data[3][0]*3.785).toFixed(1);
+            document.getElementById("tap3_showliters").innerHTML = "L) remaining";
+        }
+    }
+    function update_names() {
+        document.getElementById("tap1_name").innerHTML = tap_data[1][4];
+        document.getElementById("tap2_name").innerHTML = tap_data[2][4];
+        document.getElementById("tap3_name").innerHTML = tap_data[3][4];
+    }
+    <!-- update_names(); -->
+    setInterval(load_data, 500);
+    setInterval(update_names, 2000);
+  </script>
+  
+  
+  
+  <body>
+    <!--
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+            <li><b>Welcome to Kegbot, a Beverage Enjoyment System</b></li>
+        </ul>
+        <ul class="pull-right">
+          <li><a href="#">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    -->
+    
+    <div class="jumbotron">
+      <div class="container">
+        <h1>You look thirsty.</h1>
+        <!--
+        <p>Choose from three fine beverages served by Nuvation's Kegbot System</p>
+        <a href="#">Learn More</a>
+        -->
+      </div>
+    </div>
+    
+    <div class="beer-guide">
+        <div class="container">
+            <!--
+            <hd>Beer Guides</h2>
+            <p>dNot sure what to drink?</p>
+            -->
+            <div class="row">
+            
+                <div class="col-md-4">
+                    <h3>Tap 1</h3>
+                    <!-- <h2><span id="tap1_gal">0.0</span><span id="tap1_remaining"> gal. remaining</span></h2> -->
+                    <h2><span id="tap1_gals">0.0</span><span id="tap1_showgals"> gal. (</span><span id="tap1_liters">0.0</span><span id="tap1_showliters">L) remaining</span></h2>
+                    <h2 id="tap1_name">Tap 1 Name</h2>
+                    <p>A golden-colored traditional cider with apple juice and honey fermented together in delightful harmony. Red Branch's spotty quality control allows this draft to evolve over time, making every pint more interesting than the last. Like Bertie Bott's Every Flavour Jelly Beans from the Harry Potter tales, Red Branch Honey Apple Cider is your fermented Russian Roulette.</p>
+                    <div class="thumbnail">
+                        <img src="images/redBranchBottle.png">
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <h3>Tap 2</h3>
+                    <!-- <h2><span id="tap2_gal">0.0</span><span id="tap2_remaining"> gal. remaining</span></h2> -->
+                    <h2><span id="tap2_gals">0.0</span><span id="tap2_showgals"> gal. (</span><span id="tap2_liters">0.0</span><span id="tap2_showliters">L) remaining</span></h2>
+                    <h2 id="tap2_name">Tap 2 Name</h2>
+                    <p>A gold-medal winning IPA. This highly hopped brew will punch you in the teeth with hints of apricot, peach, mango and lemon flavors and leaves a bit of a sting, just like a Sculpin fish.</p>
+                    <div class="thumbnail">
+                        <img src="images/sculpin.png">
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <h3>Tap 3</h3>
+                    <!-- <h2><span id="tap3_gal">0.0</span><span id="tap3_remaining"> gal. remaining</span></h2> -->
+                    <h2><span id="tap3_gals">0.0</span><span id="tap3_showgals"> gal. (</span><span id="tap3_liters">0.0</span><span id="tap3_showliters">L) remaining</span></h2>
+                    <h2 id="tap3_name">Tap 3 Name</h2>
+                    <p>A golden-colored and malty lager with a creamy head. The rich flavor is counterbalanced with just the right level of bitterness from the Hallertau aroma hops and create a very smooth profile</p>
+                    <div class="thumbnail">
+                        <img src="images/gbBlondBock.jpg">
+                    </div>
+                    <!-- <h2>Anchor Steam</h2>
+                    <p>Pours a clear orange amber with a lacy off-white head supported by streams of carbonation. The aroma is a combination of malt and oranges. Medium slightly creamy body with lively carbonation. The taste is toffee, malt, and fruit. Has a smooth light maltyness with a dry hoppy and long finish.</p>
+                    <div class="thumbnail">
+                        <img src="images/anchorSteam.png">
+                    </div> -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!--
+    <div class="learn-more">
+	  <div class="container">
+		<div class="row">
+	      <div class="col-md-4">
+			<h3>Travel</h3>
+			<p>From apartments and rooms to treehouses and boats: stay in unique spaces in 192 countries.</p>
+			<p><a href="#">See how to travel on Airbnb</a></p>
+	      </div>
+		  <div class="col-md-4">
+			<h3>Host</h3>
+			<p>Renting out your unused space could pay your bills or fund your next vacation.</p>
+			<p><a href="#">Learn more about hosting</a></p>
+		  </div>
+		  <div class="col-md-4">
+			<h3>Trust and Safety</h3>
+			<p>From Verified ID to our worldwide customer support team, we've got your back.</p>
+			<p><a href="#">Learn about trust at Airbnb</a></p>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+	-->
+	
+  </body>
+</html>
