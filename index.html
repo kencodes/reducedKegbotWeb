@@ -21,7 +21,7 @@
 
     function update_volumes() {
     
-        if (tap_data[1][0] < 0.0) {
+        if (tap_data[1][0] <= 0.0) {
             document.getElementById("tap1_gals").innerHTML = "Empty";
             document.getElementById("tap1_showgals").innerHTML = "";
             document.getElementById("tap1_liters").innerHTML = "";
@@ -33,7 +33,7 @@
             document.getElementById("tap1_showliters").innerHTML = "L) remaining";
         }
         
-        if (tap_data[2][0] < 0.0) {
+        if (tap_data[2][0] <= 0.0) {
             document.getElementById("tap2_gals").innerHTML = "Empty";
             document.getElementById("tap2_showgals").innerHTML = "";
             document.getElementById("tap2_liters").innerHTML = "";
@@ -45,7 +45,7 @@
             document.getElementById("tap2_showliters").innerHTML = "L) remaining";
         }
         
-        if (tap_data[3][0] < 0.0) {
+        if (tap_data[3][0] <= 0.0) {
             document.getElementById("tap3_gals").innerHTML = "Empty";
             document.getElementById("tap3_showgals").innerHTML = "";
             document.getElementById("tap3_liters").innerHTML = "";
