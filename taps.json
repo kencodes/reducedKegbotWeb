@@ -1,26 +1,31 @@
 {
     "1": [
-        1.7394061583577953, 
+        1.4150971407624664, 
         5.0, 
         "ACTIVE", 
         "10/20/2015", 
         "Red Branch Honey Apple Cider", 
         "Hard Cider"
     ], 
+    "3": [
+        11.548178152492765, 
+        13.2, 
+        "ACTIVE", 
+        "2/19/2016", 
+        "Anchor Steam", 
+        "Anchor Steam"
+    ], 
     "2": [
-        4.848075513196482, 
+        4.739221041055719, 
         5.0, 
         "ACTIVE", 
-        "2/7/2016", 
-        "Firestone Walker Velvet Merlin", 
-        "Oatmeal Stout"
+        "2/12/2016", 
+        "Ballast Point Sculpin IPA", 
+        "Sculpin IPA"
     ], 
-    "3": [
-        1.2, 
-        15.5, 
-        "ACTIVE", 
-        "9/10/2015", 
-        "Gordon Biersch Blond Bock", 
-        "GB Blond Bock"
+    "temperature": [
+        23.75, 
+        23.75, 
+        24.6
     ]
 }
