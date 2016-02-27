@@ -38,12 +38,19 @@
     background-color: #efefef;
     border-bottom: 10px solid #dbdbdb;
 }
-.beer-guide h3 {
+.beer-guide h1 {
     color: #393C3d;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: left;
 }
 .beer-guide h2 {
+    color: #393C3d;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+.beer-guide h3 {
     color: #393C3d;
     font-size: 20px;
     text-align: left;
