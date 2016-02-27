@@ -26,8 +26,8 @@
             document.getElementById("tap1_liters").innerHTML = "";
             document.getElementById("tap1_showliters").innerHTML = "";
         } else { 
-            document.getElementById("tap1_gals").innerHTML = tap_data[1][0].toFixed(2);
-            document.getElementById("tap1_showgals").innerHTML = " gal. (";
+            document.getElementById("tap1_gals").innerHTML = tap_data[1][0].toFixed(1);
+            document.getElementById("tap1_showgals").innerHTML = "gal (";
             document.getElementById("tap1_liters").innerHTML = (tap_data[1][0]*3.785).toFixed(1);
             document.getElementById("tap1_showliters").innerHTML = "L)";
         }
@@ -38,8 +38,8 @@
             document.getElementById("tap2_liters").innerHTML = "";
             document.getElementById("tap2_showliters").innerHTML = "";
         } else {
-            document.getElementById("tap2_gals").innerHTML = tap_data[2][0].toFixed(2);
-            document.getElementById("tap2_showgals").innerHTML = " gal. (";
+            document.getElementById("tap2_gals").innerHTML = tap_data[2][0].toFixed(1);
+            document.getElementById("tap2_showgals").innerHTML = "gal (";
             document.getElementById("tap2_liters").innerHTML = (tap_data[2][0]*3.785).toFixed(1);
             document.getElementById("tap2_showliters").innerHTML = "L)";
         }
@@ -50,8 +50,8 @@
             document.getElementById("tap3_liters").innerHTML = "";
             document.getElementById("tap3_showliters").innerHTML = "";
         } else {
-            document.getElementById("tap3_gals").innerHTML = tap_data[3][0].toFixed(2);
-            document.getElementById("tap3_showgals").innerHTML = " gal. (";
+            document.getElementById("tap3_gals").innerHTML = tap_data[3][0].toFixed(1);
+            document.getElementById("tap3_showgals").innerHTML = "gal (";
             document.getElementById("tap3_liters").innerHTML = (tap_data[3][0]*3.785).toFixed(1);
             document.getElementById("tap3_showliters").innerHTML = "L)";
         }

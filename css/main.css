@@ -12,18 +12,18 @@
 
 .jumbotron {
     background:url('../images/beerbar.jpg') no-repeat center center;
-    height: 500px;
+    height: 400px;
     background-repeat: no-repeat;   
     background-size: cover;
 }
 .jumbotron .container {
     position: relative;
-    top: 70px;
+    top: 20px;
     left: 50px;
 }
 .jumbotron h1 {
     color: #fff;
-    font-size: 70px;  
+    font-size: 80px;  
     font-family: 'Shift', sans-serif;
     font-weight: bold;
     position: relative;
